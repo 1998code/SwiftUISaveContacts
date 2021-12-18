@@ -44,7 +44,8 @@ struct ContentView: View {
                                 // Handle error
                                 // may add a alert...
                             }
-                        }.buttonStyle(.borderedProminent)
+                        }
+                        .buttonStyle(.borderedProminent)
                         .tint(.black)
                     } label: {
                         ZStack {
@@ -84,6 +85,8 @@ struct ContentView: View {
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
+            newItem.name = "Ming"
+            newItem.phone = "12345678"
             newItem.timestamp = Date()
 
             do {
